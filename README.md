@@ -45,24 +45,7 @@ As perguntas analisadas foram:
 | 9 | Entre os evadidos que não trabalham, qual é a faixa etária predominante? |
 | 10 | Existe relação entre o motivo da evasão e o desempenho acadêmico? |
 
----
 
-## 📁 Arquivos
 
-| Arquivo | Descrição |
-|---------|-----------|
-| `atividade_semana3_questao3.pdf` | Entrega da Questão 3 — versão PDF formatada |
-| `main.tex` | Versão LaTeX da atividade (Overleaf) |
-| `dataset_evasao.xlsx` | Base de dados utilizada na análise |
-| `*.png` | Screenshots dos scripts Python executados no VSCode |
-
----
-
-## 🛠️ Tecnologias Utilizadas
-
-- **Python** — scripts de análise estatística
-- **VSCode** — ambiente de desenvolvimento
-- **LaTeX / Overleaf** — formatação acadêmica do documento
-- **Git / GitHub** — versionamento e organização das atividades
 
 
