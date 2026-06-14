@@ -1,8 +1,4 @@
 # 📊 Semana 3 — Análise Exploratória de Dados (AED)
-
-**Disciplina:** Introdução à Ciência de Dados  
-**Especialização:** Ciência de Dados — UTFPR  
-**Professores:** Profa. Alinne Souza e Prof. Francisco Carlos Souza  
 **Aluna:** Janyne Soares da Silva  
 **Período:** 02/05/2026 a 08/05/2026
 
