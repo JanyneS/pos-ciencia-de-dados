@@ -10,10 +10,8 @@
 import pandas as pd
 import numpy as np
 
-# --- 1. Carregar os dados ---
 df = pd.read_csv("dados.csv")
 
-# --- 2. Separar desempenho por tipo de escola ---
 desemp_publica  = df[df["Escola Ensino Medio"] == "Publica"]["Desempenho"]
 desemp_privada  = df[df["Escola Ensino Medio"] == "Privada"]["Desempenho"]
 
@@ -33,21 +31,19 @@ moda_privada = desemp_privada.mode()[0]
 
 # --- 4. Medidas de Dispersão ---
 
-# DESVIO PADRÃO: quanto o desempenho varia dentro de cada grupo
+# DESVIO PADRÃO: 
 dp_publica = desemp_publica.std()
 dp_privada = desemp_privada.std()
 
-# VARIÂNCIA: dispersão total do desempenho por grupo
+# VARIÂNCIA: 
 var_publica = desemp_publica.var()
 var_privada = desemp_privada.var()
 
 # COVARIÂNCIA: relação entre tipo de escola e desempenho
-# Convertemos escola para número para poder calcular
-# Pública = 0, Privada = 1
 df["escola_num"] = df["Escola Ensino Medio"].map({"Publica": 0, "Privada": 1})
 covariancia = df["escola_num"].cov(df["Desempenho"])
 
-# --- 5. Exibir resultados ---
+
 print("=" * 60)
 print("PERGUNTA 6: Tipo de escola influencia no desempenho?")
 print("=" * 60)
@@ -60,7 +56,7 @@ print()
 print(f"Covariância (escola x desempenho): {covariancia:.4f}")
 print()
 
-# --- 6. Interpretação ---
+
 print("--- Interpretação ---")
 print(f"Escola pública: desempenho médio de {media_publica:.1f} pontos.")
 print(f"Escola privada: desempenho médio de {media_privada:.1f} pontos.")
