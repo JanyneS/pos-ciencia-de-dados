@@ -10,12 +10,8 @@
 import pandas as pd
 import numpy as np
 
-# --- 1. Carregar os dados ---
 df = pd.read_csv("dados.csv")
 
-# --- 2. Contagem por grupo ---
-# Contar quantos evadidos trabalham vs não trabalham
-# Isso responde diretamente a pergunta
 evadidos_trabalham = df[(df["Status"] == "Evadido") & (df["Trabalha Atualmente"] == "Sim")]
 evadidos_nao_trabalham = df[(df["Status"] == "Evadido") & (df["Trabalha Atualmente"] == "Nao")]
 
@@ -30,22 +26,15 @@ moda_trabalham = df[df["Trabalha Atualmente"] == "Sim"]["Status"].mode()[0]
 moda_nao_trabalham = df[df["Trabalha Atualmente"] == "Nao"]["Status"].mode()[0]
 
 # --- 4. Covariância ---
-# Para calcular covariância, precisamos transformar as colunas em números:
-# Trabalha: Sim = 1, Não = 0
-# Status: Evadido = 1, outros = 0
 df["trabalha_num"] = df["Trabalha Atualmente"].map({"Sim": 1, "Nao": 0})
 df["evadido_num"] = df["Status"].apply(lambda x: 1 if x == "Evadido" else 0)
 
-# Covariância: se positiva, indica que quem trabalha tende mais a evadir
-# Se negativa, quem trabalha tende menos a evadir
 covariancia = df["trabalha_num"].cov(df["evadido_num"])
 
 # --- 5. Taxa de evasão por grupo (porcentagem) ---
-# Facilita a interpretação visual dos resultados
 taxa_evasao_trabalham = (len(evadidos_trabalham) / len(total_trabalham)) * 100
 taxa_evasao_nao_trabalham = (len(evadidos_nao_trabalham) / len(total_nao_trabalham)) * 100
 
-# --- 6. Exibir resultados ---
 print("=" * 55)
 print("PERGUNTA 3: Estudantes que trabalham evadem mais?")
 print("=" * 55)
@@ -66,7 +55,6 @@ print(f"Taxa de evasão entre quem trabalha:     {taxa_evasao_trabalham:.1f}%")
 print(f"Taxa de evasão entre quem não trabalha: {taxa_evasao_nao_trabalham:.1f}%")
 print()
 
-# --- 7. Interpretação da covariância ---
 print("--- Interpretação ---")
 if covariancia > 0:
     print("Covariância POSITIVA: quem trabalha tende a evadir mais.")
