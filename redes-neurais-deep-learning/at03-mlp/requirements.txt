@@ -1,0 +1,11 @@
+scikit-learn
+# pandas 3.x quebra o leitor ARFF do fetch_openml (sklearn 1.9); manter na série 2.x
+pandas<3
+numpy
+matplotlib
+seaborn
+openml
+# geração do PDF (06_gerar_pdf.py)
+markdown
+xhtml2pdf
+pillow
