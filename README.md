@@ -1,8 +1,7 @@
-# 🎓 Pós-Graduação em Ciência de Dados — UTFPR
+# 🎓 Pós-Graduação em Ciência de Dados
 
 Repositório com as atividades desenvolvidas ao longo da pós-graduação, organizadas por disciplina.
 
-**Aluna:** Janyne Soares da Silva
 
 ---
 
