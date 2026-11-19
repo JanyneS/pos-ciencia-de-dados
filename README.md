@@ -1,6 +1,6 @@
 # 🎓 Pós-Graduação em Ciência de Dados
 
-Repositório com as atividades desenvolvidas ao longo da pós-graduação, organizadas por disciplina.
+Repositório com algumas atividades desenvolvidas ao longo da pós-graduação, organizadas por disciplina.
 
 
 ---
